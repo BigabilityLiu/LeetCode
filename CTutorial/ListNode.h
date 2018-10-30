@@ -11,6 +11,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "stdbool.h"
 
 struct ListNode {
     int val;
@@ -25,4 +26,8 @@ struct ListNode* removeElements(struct ListNode* head, int val);
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2);
 
 void listNodePlayExample();
+// 234
+bool isPalindrome(struct ListNode* head);
+// 876
+struct ListNode* middleNode(struct ListNode* head);
 #endif /* ListNode_h */

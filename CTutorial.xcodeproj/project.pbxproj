@@ -274,7 +274,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QB846LS74R;
+				DEVELOPMENT_TEAM = M472G395VP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -283,7 +283,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QB846LS74R;
+				DEVELOPMENT_TEAM = M472G395VP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

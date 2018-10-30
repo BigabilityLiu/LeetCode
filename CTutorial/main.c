@@ -14,6 +14,6 @@
 
 int main ()
 {
-    myStackPlayExample();
+    
     return 0;
 }

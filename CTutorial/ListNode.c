@@ -149,8 +149,40 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     }
     return result;
 }
-
-
+bool isPalindrome(struct ListNode* head) {
+    int maxSize=100,size=0;
+    int* array;
+    array = (int *)malloc(sizeof(int) * maxSize);
+    if (!array) return false;
+    while (head) {
+        if (size     == maxSize) {
+            maxSize += 100;
+            array = (int *)realloc(array, sizeof(int) * (maxSize));
+        }
+        *(array + size++) = head->val;
+        head = head->next;
+    }
+    for (int i=0; i<size/2; i++) {
+        if (*(array + i) != *(array + size - i - 1)){
+            return false;
+        }
+    }
+    free(array);
+    return true;
+}
+struct ListNode* middleNode(struct ListNode* head) {
+    struct ListNode* p = head;
+    int size = 0;
+    while (p) {
+        p = p->next;
+        size++;
+    }
+    p = head;
+    for (int i=0; i<size/2; i++) {
+        p = p->next;
+    }
+    return p;
+}
 
 
 void listNodePlayExample(){
