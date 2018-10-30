@@ -7,7 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB1A771F2153A05100700D0E /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = AB1A771E2153A05100700D0E /* utils.c */; };
 		AB1DB3572152717700671C2C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AB1DB3562152717700671C2C /* main.c */; };
+		ABB935AA218042D20069BBBF /* Tree.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB935A9218042D20069BBBF /* Tree.c */; };
+		ABB935AD2182A41D0069BBBF /* MinStack.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB935AC2182A41D0069BBBF /* MinStack.c */; };
+		ABD3CA532182B8A20042D574 /* ListNode.c in Sources */ = {isa = PBXBuildFile; fileRef = ABD3CA522182B8A20042D574 /* ListNode.c */; };
+		ABD3CA562188482A0042D574 /* MyQueue.c in Sources */ = {isa = PBXBuildFile; fileRef = ABD3CA552188482A0042D574 /* MyQueue.c */; };
+		ABD3CA5921884EFF0042D574 /* MyStack.c in Sources */ = {isa = PBXBuildFile; fileRef = ABD3CA5821884EFF0042D574 /* MyStack.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +29,20 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		AB1A771D2153A05100700D0E /* utils.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = utils.h; sourceTree = "<group>"; };
+		AB1A771E2153A05100700D0E /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
 		AB1DB3532152717700671C2C /* CTutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CTutorial; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1DB3562152717700671C2C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		ABB935A8218042D20069BBBF /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
+		ABB935A9218042D20069BBBF /* Tree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Tree.c; sourceTree = "<group>"; };
+		ABB935AB2182A41D0069BBBF /* MinStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinStack.h; sourceTree = "<group>"; };
+		ABB935AC2182A41D0069BBBF /* MinStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MinStack.c; sourceTree = "<group>"; };
+		ABD3CA512182B8A20042D574 /* ListNode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListNode.h; sourceTree = "<group>"; };
+		ABD3CA522182B8A20042D574 /* ListNode.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = ListNode.c; sourceTree = "<group>"; };
+		ABD3CA542188482A0042D574 /* MyQueue.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyQueue.h; sourceTree = "<group>"; };
+		ABD3CA552188482A0042D574 /* MyQueue.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MyQueue.c; sourceTree = "<group>"; };
+		ABD3CA5721884EFF0042D574 /* MyStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyStack.h; sourceTree = "<group>"; };
+		ABD3CA5821884EFF0042D574 /* MyStack.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MyStack.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,18 @@
 			isa = PBXGroup;
 			children = (
 				AB1DB3562152717700671C2C /* main.c */,
+				AB1A771D2153A05100700D0E /* utils.h */,
+				AB1A771E2153A05100700D0E /* utils.c */,
+				ABB935A8218042D20069BBBF /* Tree.h */,
+				ABB935A9218042D20069BBBF /* Tree.c */,
+				ABB935AB2182A41D0069BBBF /* MinStack.h */,
+				ABB935AC2182A41D0069BBBF /* MinStack.c */,
+				ABD3CA512182B8A20042D574 /* ListNode.h */,
+				ABD3CA522182B8A20042D574 /* ListNode.c */,
+				ABD3CA542188482A0042D574 /* MyQueue.h */,
+				ABD3CA552188482A0042D574 /* MyQueue.c */,
+				ABD3CA5721884EFF0042D574 /* MyStack.h */,
+				ABD3CA5821884EFF0042D574 /* MyStack.c */,
 			);
 			path = CTutorial;
 			sourceTree = "<group>";
@@ -118,6 +148,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABD3CA5921884EFF0042D574 /* MyStack.c in Sources */,
+				AB1A771F2153A05100700D0E /* utils.c in Sources */,
+				ABB935AD2182A41D0069BBBF /* MinStack.c in Sources */,
+				ABB935AA218042D20069BBBF /* Tree.c in Sources */,
+				ABD3CA562188482A0042D574 /* MyQueue.c in Sources */,
+				ABD3CA532182B8A20042D574 /* ListNode.c in Sources */,
 				AB1DB3572152717700671C2C /* main.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
