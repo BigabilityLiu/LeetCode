@@ -149,7 +149,7 @@ struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2) {
     }
     return result;
 }
-bool isPalindrome(struct ListNode* head) {
+bool isListNodePalindrome(struct ListNode* head) {
     int maxSize=100,size=0;
     int* array;
     array = (int *)malloc(sizeof(int) * maxSize);

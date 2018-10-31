@@ -25,9 +25,11 @@ struct ListNode* removeElements(struct ListNode* head, int val);
 // 2
 struct ListNode* addTwoNumbers(struct ListNode* l1, struct ListNode* l2);
 
-void listNodePlayExample();
 // 234
-bool isPalindrome(struct ListNode* head);
+bool isListNodePalindrome(struct ListNode* head);
 // 876
 struct ListNode* middleNode(struct ListNode* head);
+
+
+void listNodePlayExample();
 #endif /* ListNode_h */

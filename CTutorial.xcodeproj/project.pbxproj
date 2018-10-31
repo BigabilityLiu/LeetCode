@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AB1A771F2153A05100700D0E /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = AB1A771E2153A05100700D0E /* utils.c */; };
 		AB1DB3572152717700671C2C /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = AB1DB3562152717700671C2C /* main.c */; };
+		AB33F8E421894DB9009DE666 /* MyLinkedList.c in Sources */ = {isa = PBXBuildFile; fileRef = AB33F8E321894DB9009DE666 /* MyLinkedList.c */; };
 		ABB935AA218042D20069BBBF /* Tree.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB935A9218042D20069BBBF /* Tree.c */; };
 		ABB935AD2182A41D0069BBBF /* MinStack.c in Sources */ = {isa = PBXBuildFile; fileRef = ABB935AC2182A41D0069BBBF /* MinStack.c */; };
 		ABD3CA532182B8A20042D574 /* ListNode.c in Sources */ = {isa = PBXBuildFile; fileRef = ABD3CA522182B8A20042D574 /* ListNode.c */; };
@@ -33,6 +34,8 @@
 		AB1A771E2153A05100700D0E /* utils.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = utils.c; sourceTree = "<group>"; };
 		AB1DB3532152717700671C2C /* CTutorial */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CTutorial; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB1DB3562152717700671C2C /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		AB33F8E221894DB9009DE666 /* MyLinkedList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyLinkedList.h; sourceTree = "<group>"; };
+		AB33F8E321894DB9009DE666 /* MyLinkedList.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = MyLinkedList.c; sourceTree = "<group>"; };
 		ABB935A8218042D20069BBBF /* Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tree.h; sourceTree = "<group>"; };
 		ABB935A9218042D20069BBBF /* Tree.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Tree.c; sourceTree = "<group>"; };
 		ABB935AB2182A41D0069BBBF /* MinStack.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MinStack.h; sourceTree = "<group>"; };
@@ -88,6 +91,8 @@
 				ABD3CA552188482A0042D574 /* MyQueue.c */,
 				ABD3CA5721884EFF0042D574 /* MyStack.h */,
 				ABD3CA5821884EFF0042D574 /* MyStack.c */,
+				AB33F8E221894DB9009DE666 /* MyLinkedList.h */,
+				AB33F8E321894DB9009DE666 /* MyLinkedList.c */,
 			);
 			path = CTutorial;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB33F8E421894DB9009DE666 /* MyLinkedList.c in Sources */,
 				ABD3CA5921884EFF0042D574 /* MyStack.c in Sources */,
 				AB1A771F2153A05100700D0E /* utils.c in Sources */,
 				ABB935AD2182A41D0069BBBF /* MinStack.c in Sources */,
@@ -274,7 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M472G395VP;
+				DEVELOPMENT_TEAM = QB846LS74R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -283,7 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = M472G395VP;
+				DEVELOPMENT_TEAM = QB846LS74R;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
