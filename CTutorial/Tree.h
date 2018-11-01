@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include "stdbool.h"
 #include "stdlib.h"
+#include <math.h>
 
 struct TreeNode {
     int val;
@@ -28,6 +29,11 @@ int** levelOrderBottom(struct TreeNode* root, int** columnSizes, int* returnSize
 bool isBalanced(struct TreeNode* root);
 // 101
 bool isSymmetric(struct TreeNode* root);
+
+// 257
+char** binaryTreePaths(struct TreeNode* root, int* returnSize);
+// 437
+int pathSum(struct TreeNode* root, int sum);
 
 void treePlayExample();
 #endif /* Tree_h */

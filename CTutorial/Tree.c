@@ -130,6 +130,70 @@ bool isSymmetric(struct TreeNode* root) {
     }
     return isMirror(root->left, root->right);
 }
+void addToPath(struct TreeNode* node, char*** array, int** returnSize, int *size, char * temp){
+    
+}
+//char** binaryTreePaths(struct TreeNode* root, int* returnSize) {
+//    int size=0;
+//    char** result;
+//    
+//    if (root) {
+//        size++;
+//        returnSize = (int *)realloc(returnSize, size * sizeof(int));
+//        returnSize[size-1] = 1;
+//        result = (char **)realloc(result, size * sizeof(int *));
+//        result[size-1] = (char *)realloc(result[size-1], returnSize[size-1] * sizeof(char *));
+//        result[size-1][returnSize[size-1]] =
+//    }
+//}
+void pathOneNode(struct TreeNode* root, int* count,int sum,int total) {
+    total += root->val;
+    if (total == sum) {
+        (*count)++;
+    }
+    if (root->left) {
+        pathOneNode(root->left, count, sum, total);
+    }
+    if (root->right) {
+        pathOneNode(root->right, count, sum, total);
+    }
+    
+}
+void pathTraverse(struct TreeNode* root, int* count,int sum) {
+    if (root) {
+        pathOneNode(root, count, sum, 0);
+        if (root->left) {
+            pathTraverse(root->left, count, sum);
+        }
+        if (root->right) {
+            pathTraverse(root->right, count, sum);
+        }
+    }
+}
+int pathSum(struct TreeNode* root, int sum) {
+    int result=0;
+    pathTraverse(root, &result, sum);
+    return result;
+}
+int max(int a, int b){
+    return a > b ? a : b;
+}
+int maxDistance(struct TreeNode* root){
+    if (!root) {
+        return 0;
+    }
+    int distanceRoot = maxDepth(root->left) + maxDepth(root->right);
+    int distanceLeft = maxDistance(root->left);
+    int distanceRight = maxDistance(root->right);
+    return max(max(distanceLeft, distanceRight),distanceRoot);
+}
+int diameterOfBinaryTree(struct TreeNode* root) {
+    return maxDistance(root);
+}
+
+
+
+
 
 void treePlayExample(){
     

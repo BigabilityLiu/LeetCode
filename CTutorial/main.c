@@ -15,6 +15,5 @@
 
 int main ()
 {
-    myLiskedListPlayExample();
     return 0;
 }
