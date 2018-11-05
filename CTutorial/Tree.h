@@ -29,11 +29,18 @@ int** levelOrderBottom(struct TreeNode* root, int** columnSizes, int* returnSize
 bool isBalanced(struct TreeNode* root);
 // 101
 bool isSymmetric(struct TreeNode* root);
-
+// 235
+struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q);
 // 257
 char** binaryTreePaths(struct TreeNode* root, int* returnSize);
 // 437
 int pathSum(struct TreeNode* root, int sum);
+// 538
+struct TreeNode* convertBST(struct TreeNode* root);
+struct TreeNode* convertBST2(struct TreeNode* root);
+// 563
+int sumNode(struct TreeNode* root, int* total);
+
 
 void treePlayExample();
 #endif /* Tree_h */

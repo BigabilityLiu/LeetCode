@@ -10,14 +10,14 @@
 
 bool isSameTree(struct TreeNode* p, struct TreeNode* q) {
     if(p==NULL && q==NULL){
-        return 1;
+        return true;
     }else if(p==NULL || q==NULL){
-        return 0;
+        return false;
     }else{
         if (p->val == q->val){
             return isSameTree(p->left, q->left) && isSameTree(p->right, q->right);
         }else{
-            return 0;
+            return false;
         }
     }
 }
@@ -190,10 +190,127 @@ int maxDistance(struct TreeNode* root){
 int diameterOfBinaryTree(struct TreeNode* root) {
     return maxDistance(root);
 }
+int height(struct TreeNode* root, int* result){
+    if (!root) {
+        return 0;
+    }
+    int lheight = height(root->left, result);
+    int rheight = height(root->right, result);
+    
+    if (lheight + rheight > *result) {
+        *result = lheight + rheight;
+    }
+    
+    return lheight > rheight ? lheight + 1 : rheight + 1;
+}
+int diameterOfBinaryTree2(struct TreeNode* root) {
+    int result=0;
+    height(root, &result);
+    return result;
+}
+void arrayBST(struct TreeNode* root,int** array, int* size) {
+    if (!root) {
+        return ;
+    }
+    (*size)++;
+    *array = realloc(*array, (*size) * sizeof(int));
+    (*array)[*size-1] = root->val;
+    arrayBST(root->left, array, size);
+    arrayBST(root->right, array, size);
+}
+void addToBST(struct TreeNode* root,int** array, int size) {
+    if (!root) return ;
+    int newValue = root->val;
+    for (int i=0; i<size; i++) {
+        if ((*array)[i] > root->val) {
+            newValue += (*array)[i];
+        }
+    }
+    root->val = newValue;
+    addToBST(root->left, array, size);
+    addToBST(root->right, array, size);
+}
+struct TreeNode* convertBST(struct TreeNode* root) {
+    int size=0;
+    int* array;
+    arrayBST(root,&array, &size);
+    addToBST(root, &array, size);
+    return root;
+}
+void compute_sums (struct TreeNode *root, int *curr_sum) {
+    
+    if (root == NULL) return;
+    
+    //We go as far right as we can, so we know that the value on the far
+    //right will be greater than all the other values, then we recursively
+    //update the curr_sum to add to each node:
+    compute_sums (root->right, curr_sum);
+    root->val += *curr_sum;
+    *curr_sum = root->val;
+    //Now we traverse to the left, since everything on the left sub-tree
+    //will be less than the value at the root node:
+    compute_sums(root->left, curr_sum);
+    
+}
 
-
-
-
+struct TreeNode * convertBST2(struct TreeNode *root) {
+    int curr_sum = 0;
+    compute_sums(root, &curr_sum);
+    
+    return root;
+}
+int sumNode(struct TreeNode* root, int* total) {
+    if (!root) {
+        return 0;
+    }
+    int lSum = sumNode(root->left, total);
+    int rSum = sumNode(root->right, total);
+    *total += abs(lSum - rSum);
+    return lSum + rSum + root->val;
+}
+int findTilt(struct TreeNode* root) {
+    int result=0;
+    sumNode(root, &result);
+    return result;
+}
+void isSubTreeTraverse(struct TreeNode* s, struct TreeNode* t, bool* result) {
+    if (*result) {
+        return;
+    }
+    if (s->left) {
+        isSubTreeTraverse(s->left, t, result);
+    }
+    if (s->right) {
+        isSubTreeTraverse(s->right, t, result);
+    }
+    if (isSameTree(s, t)){
+        *result = true;
+        return;
+    }
+}
+bool isSubtree(struct TreeNode* s, struct TreeNode* t) {
+    bool result = false;
+    isSubTreeTraverse(s, t, &result);
+    return result;
+}
+struct TreeNode* lowestCommonAncestorHelper(struct TreeNode* root, int min, int max){
+    if (root->val >= min & root->val <= max){
+        return root;
+    }
+    else if (root->val > min){
+        return lowestCommonAncestorHelper(root->left, min, max);
+    }
+    else {
+        return lowestCommonAncestorHelper(root->right, min, max);
+    }
+}
+struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {
+    if (p->val >= q->val) {
+        return lowestCommonAncestorHelper(root, q->val, p->val);
+    }else{
+        return lowestCommonAncestorHelper(root, p->val, q->val);
+    }
+}
 
 void treePlayExample(){
     
